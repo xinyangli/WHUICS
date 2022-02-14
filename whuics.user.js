@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WHUICS
 // @namespace    WHUICS
-// @version      0.1.1
+// @version      0.1.2
 // @description  Convert classes agenda to ICS file
 // @author       Xinyang Li
 // @match        jwgl.whu.edu.cn/*
@@ -37,8 +37,8 @@
                 var beginTime = new Date(semesterStart);
                 var endTime = new Date(semesterStart);
                 var parsedDate = d[j].split(/[星期, 第, \-, 节, 周, \{, \}]+/);
-                beginTime.setDate(beginTime.getDate() + DOW.indexOf(parsedDate[1]) + 7 * parsedDate[4]);
-                endTime.setDate(endTime.getDate() + DOW.indexOf(parsedDate[1]) + 7 * parsedDate[4]);
+                beginTime.setDate(beginTime.getDate() + DOW.indexOf(parsedDate[1]) + 7 * (parsedDate[4] - 1));
+                endTime.setDate(endTime.getDate() + DOW.indexOf(parsedDate[1]) + 7 * (parsedDate[4] - 1));
                 beginTime.setHours(lessonBegin[parsedDate[2]].hour);
                 beginTime.setMinutes(lessonBegin[parsedDate[2]].minutes);
                 endTime.setHours(lessonEnd[parsedDate[3]].hour);
