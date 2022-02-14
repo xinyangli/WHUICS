@@ -34,8 +34,8 @@
             var d = dates[i].split('\n');
             var addr_s = addr[i].split('\n');
             for (var j = 0; j < d.length; j++){
-                var beginTime = semesterStart;
-                var endTime = semesterStart;
+                var beginTime = new Date(semesterStart);
+                var endTime = new Date(semesterStart);
                 var parsedDate = d[j].split(/[星期, 第, \-, 节, 周, \{, \}]+/);
                 beginTime.setDate(beginTime.getDate() + DOW.indexOf(parsedDate[1]) + 7 * parsedDate[4]);
                 endTime.setDate(endTime.getDate() + DOW.indexOf(parsedDate[1]) + 7 * parsedDate[4]);
