@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WHUICS
 // @namespace    WHUICS
-// @version      0.1
+// @version      0.1.1
 // @description  Convert classes agenda to ICS file
 // @author       Xinyang Li
 // @match        jwgl.whu.edu.cn/*
