@@ -5,7 +5,6 @@
 // @description  Convert classes agenda to ICS file
 // @author       Xinyang Li
 // @match        jwgl.whu.edu.cn/*
-// @require      https://raw.githubusercontent.com/nwcell/ics.js/master/ics.deps.min.js
 // @grant        none
 // ==/UserScript==
 
